@@ -1,0 +1,82 @@
+.white-container {
+  background-color: #182131;
+  min-height: stretch;
+  max-height: max-content;
+}
+
+.header-box {
+  padding-top: 7em;
+
+  p {
+    color: white;
+    text-align: center;
+  }
+
+  h4 {
+    text-align: center;
+    color: white;
+  }
+
+  .logo-wrapper {
+    display: flex;
+    justify-content: center;
+
+    .logo-box {
+      text-align: start;
+
+      img {
+        width: 22em;
+      }
+    }
+  }
+}
+
+.middle-box {
+  display: flex;
+
+  .left-box {
+    padding: 3em;
+
+    .left-box-content {
+      padding: 2em;
+      box-sizing: border-box;
+      border-radius: 4px;
+      box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+        0 8px 10px 1px rgba(0, 0, 0, 0.14),
+        0 3px 14px 2px rgba(0, 0, 0, 0.12);
+    }
+  }
+
+  .right-box {
+    padding: 3em;
+
+    .right-box-content {
+      padding: 2em;
+      box-sizing: border-box;
+      border-radius: 4px;
+      box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+        0 8px 10px 1px rgba(0, 0, 0, 0.14),
+        0 3px 14px 2px rgba(0, 0, 0, 0.12);
+    }
+
+  }
+}
+
+.movie-card {
+  .movie-title {
+    display: flex;
+
+    p {
+      color: white;
+    }
+
+    .icon-trash {
+      color: #C76060;
+      padding-left: 10px;
+    }
+  }
+
+  h3 {
+    color: white;
+  }
+}
