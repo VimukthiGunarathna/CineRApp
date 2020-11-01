@@ -24,7 +24,7 @@ export class CinerService {
   }
 
   /**
-   * Get initial data collection
+   * Get time slots for a particular movie
    * @param id : Movie id
    */
   public getMovieTimeSlots(id) {
@@ -32,23 +32,21 @@ export class CinerService {
   }
 
   /**
-   * Add item to the local storage
-   * @param item : Target item
+   * Add movie to database
+   * @param movie : movie object
    */
-  addMovie(item) {
-    const newMovie = item;
-    console.log('IAM ',newMovie);   
-    return this.http.post(`${this.url}/addMovie`, newMovie, {headers: this.headers});
+  addMovie(movie) {
+    console.log('IAM ',movie);   
+    return this.http.post(`${this.url}/addMovie`, movie, {headers: this.headers});
   }
 
   /**
-  * Add item to the local storage
-  * @param item : Target item
+  * Delete movie from database
+  * @param movieId : movie id of the selected movie
   */
-  deleteItem(itemId) {
-    const movieId = itemId;
+  deleteMovie(movieId) {
     console.log('IAM ',movieId);   
-    return this.http.put(`${this.url}/updateMovie`, movieId, {headers: this.headers});
+    return this.http.put(`${this.url}/deleteMovie/`+ movieId, {headers: this.headers});
   }
 
   /**

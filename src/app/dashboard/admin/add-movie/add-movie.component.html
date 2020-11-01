@@ -1,0 +1,64 @@
+<form [formGroup]="addMovieForm">
+    <div class="form-group">
+        <input type="text" class="form-control form-inputs" id="exampleFormControlInput1" formControlName="movie_name"
+            placeholder="enter movie title">
+    </div>
+    <div class="form-group">
+        <textarea class="form-control form-inputs" id="exampleFormControlTextarea1" rows="3"
+            formControlName="movie_desc" placeholder="enter movie description.."></textarea>
+    </div>
+    <div class="form-group">
+        <input type="number" class="form-control form-inputs" id="exampleFormControlInput1" formControlName="available_seats"
+            placeholder="seat capacity">
+    </div>
+    <div class="form-group">
+        <select class="form-control" id="exampleFormControlSelect1">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+        </select>
+    </div>
+</form>
+<div class="add-time-slots" data-toggle="modal" data-target="#exampleModalCenter">
+    <div class="time-slots" *ngFor="let slots of timeSlots">
+        <p>{{slots}}</p>
+    </div>
+    <div class="slot-icon">
+        <fa-icon class="icon-trash" [icon]="['fas', 'plus']">
+        </fa-icon>
+    </div>
+    <div class="slot-btn">
+        <p>add time slots</p>
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Add time slots</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form [formGroup]="addTimeSlotForm">
+                    <div class="form-group">
+                        <input class="form-control form-inputs" formControlName="time_slots" placeholder="time slots">
+                        <!-- <span class="text-danger"
+                            *ngIf="todoItemFormControl.title.touched && todoItemFormControl.title.errors?.titleNotAvailable">
+                            This title is already taken
+                        </span> -->
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" (click)="addTimeSlot()" data-dismiss="modal">Add</button>
+            </div>
+        </div>
+    </div>
+</div>
+<button type="button" class="btn btn-secondary" (click)="onSubmit()">Submit</button>

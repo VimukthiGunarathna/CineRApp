@@ -18,45 +18,21 @@
                 <div class="movie-card" *ngFor="let movie of allMovies">
                     <div class="movie-title">
                         <h3>{{movie.movie_name}}</h3>
-                        <fa-icon class="icon-trash" [icon]="['fas', 'trash']">
+                        <fa-icon class="icon-trash" [icon]="['fas', 'trash']" (click)="deleteMovie(movie)">
                         </fa-icon>
                     </div>
                     <p>{{movie.movie_desc}}</p>
-                    <div class="time-slot" *ngFor="let slot of movie.movie_slots">
-                        <p>hey{{slot.time_slot}}</p>
+                    <div class="time-slot">
+                        <div class="slot" *ngFor="let slot of movie.movie_slots">
+                            <p>{{slot.time_slot}}</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="col-lg-6 right-box">
             <div class="right-box-content">
-                <form>
-                    <div class="form-group">
-                        <label for="exampleFormControlInput1">Email address</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1"
-                            placeholder="name@example.com">
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleFormControlSelect1">Example select</label>
-                        <select class="form-control" id="exampleFormControlSelect1">
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleFormControlTextarea1">Example textarea</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                    </div>
-                    <select class="custom-select">
-                        <option selected>Open this select menu</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                    </select>
-                </form>
+                <app-add-movie></app-add-movie>
             </div>
         </div>
 

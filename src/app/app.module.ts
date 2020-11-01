@@ -10,18 +10,24 @@ import { AdminComponent } from './dashboard/admin/admin.component';
 import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faSquare, faCheckSquare, faCog, faPlus, faPlusSquare, faEllipsisV, faTrash, faAngleDown } from '@fortawesome/free-solid-svg-icons';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AddMovieComponent } from './dashboard/admin/add-movie/add-movie.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
-    AdminComponent
+    AdminComponent,
+    AddMovieComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    ReactiveFormsModule,
+    FormsModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
