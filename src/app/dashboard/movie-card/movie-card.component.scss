@@ -1,0 +1,45 @@
+.movie-card-container {
+  display: flex;
+  padding: 0em 3em 0em 3em;
+
+  .movie-card {
+    padding: 0em 3em 0em 0em;
+
+    img {
+      height: 14em;
+    }
+
+    .movie-content {
+      background-color: #151F2E;
+      border-radius: 0px 0px 5px 5px;
+      padding: 1em 0em 1em 1em;
+      width: 14.6em;
+
+      .movie-title {
+        color: white;
+        font-size: 20px;
+        font-weight: 500;
+
+        p {
+          margin-bottom: 0rem;
+        }
+      }
+
+      .movie-desc {
+        color: #DED9D9;
+        font-size: 13px;
+        font-weight: 300;
+
+        p {
+          margin-bottom: 0rem;
+        }
+      }
+      .movie-slots {
+        display: flex;
+        .slot {
+          color: #DED9D9;
+        }
+      }
+    }
+  }
+}

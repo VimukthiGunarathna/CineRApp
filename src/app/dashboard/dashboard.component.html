@@ -11,20 +11,28 @@
         <div class="col-lg-4 profile-wrapper">
             <div class="profile-content">
                 <div class="profile-details-box">
-                    <h4>Vimukthi Gunarathna</h4>
+                    <p>WELCOME, Vimukthi Gunarathna</p>
                 </div>
                 <div class="profile-img-box" routerLink="/admin" routerLinkActive="active">
                     <div class="profile-img"></div>
-                    <div class="icon">
-                        <!-- <fa-icon [icon]="['fas', 'cog']"></fa-icon> -->
-                    </div>
+                </div>
+                <div class="icon">
+                    <fa-icon [icon]="['fas', 'chevron-down']"></fa-icon>
                 </div>
             </div>
         </div>
     </div>
     <div class="cover-box">
+        <div class="cover-img">
+            <img src="../../assets/bg.png" alt="">
+        </div>
     </div>
     <div class="middle-box">
-
+        <div class="middle-box-topic">
+            <p>All movies in theatre</p>
+        </div>
+        <div class="movie-card-wrapper">
+            <app-movie-card></app-movie-card>
+        </div>
     </div>
 </div>

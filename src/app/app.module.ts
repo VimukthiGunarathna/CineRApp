@@ -8,17 +8,19 @@ import { AdminComponent } from './dashboard/admin/admin.component';
 
 // Dependencies 
 import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faSquare, faCheckSquare, faCog, faPlus, faPlusSquare, faEllipsisV, faTrash, faAngleDown } from '@fortawesome/free-solid-svg-icons';
+import { faSquare, faCheckSquare, faCog, faPlus, faPlusSquare, faEllipsisV, faTrash, faAngleDown, faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AddMovieComponent } from './dashboard/admin/add-movie/add-movie.component';
+import { MovieCardComponent } from './dashboard/movie-card/movie-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
     AdminComponent,
-    AddMovieComponent
+    AddMovieComponent,
+    MovieCardComponent
   ],
   imports: [
     BrowserModule,
@@ -34,6 +36,6 @@ import { AddMovieComponent } from './dashboard/admin/add-movie/add-movie.compone
 })
 export class AppModule { 
   constructor(private library: FaIconLibrary) {
-    library.addIcons(faSquare, faCheckSquare, faCog, faPlus,faPlusSquare,faEllipsisV,faTrash,faAngleDown);
+    library.addIcons(faSquare, faCheckSquare, faCog, faPlus,faPlusSquare,faEllipsisV,faTrash,faAngleDown, faChevronDown);
   }
 }

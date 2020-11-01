@@ -1,7 +1,8 @@
 .white-container {
-  background-color: white;
+  background-color: #0F0F10;
   min-height: stretch;
   max-height: max-content;
+  height: 100em;
 }
 
 .header-box {
@@ -20,48 +21,62 @@
     }
   }
 }
+
 .profile-wrapper {
-    text-align: end;
+  text-align: end;
 
-    .profile-content {
-      display: flex;
-      justify-content: flex-end;
-      padding: 40px 10px 10px 10px;
+  .profile-content {
+    display: flex;
+    justify-content: flex-end;
+    padding: 12px 10px 10px 10px;
 
-      .profile-img-box {
-        position: relative;
+    .profile-img-box {
+      position: relative;
 
-        .profile-img {
-          width: 5em;
-          height: 5em;
-          background-image: url("../../assets/prof.jpg");
-          border-radius: 50%;
-          background-size: cover;
-        }
-
-        .icon {
-          position: absolute;
-          top: 53px;
-          right: 0px;
-          font-size: 24px;
-          color: #60CCF4;
-        }
-      }
-
-      .profile-details-box {
-        text-align: start;
-        padding: 0px 10px 0px 0px;
-        position: relative;
-
-        h4 {
-            color: white;
-        }
-
-        p {
-          color: #60CCF4;
-          position: absolute;
-          top: 30px;
-        }
+      .profile-img {
+        width: 4em;
+        height: 4em;
+        background-image: url("../../assets/prof.jpg");
+        border-radius: 50%;
+        background-size: cover;
       }
     }
+
+    .profile-details-box {
+      text-align: start;
+      padding: 0px 10px 0px 0px;
+      position: relative;
+      font-size: 20px;
+      color: white;
+      font-weight: 100;
+
+      position: absolute;
+      top: 18px;
+      right: 92px;
+    }
   }
+
+  .icon {
+    position: absolute;
+    top: 20px;
+    right: 7px;
+    font-size: 19px;
+    color: white;
+  }
+}
+
+.cover-box {
+  display: flex;
+  justify-content: center;
+
+  .cover-img {}
+}
+
+.middle-box {
+  padding: 10px 45px 0px 45px;
+  .middle-box-topic {
+    font-size: 20px;
+    color: white;
+    font-weight: 300;
+  }
+}
