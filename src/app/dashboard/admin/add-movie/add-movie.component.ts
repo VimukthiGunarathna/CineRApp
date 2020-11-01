@@ -29,6 +29,9 @@ export class AddMovieComponent implements OnInit {
     });
   }
 
+  /**
+   * Initialize new movie obj
+   */
   public onSubmit() {
     if (this.addMovieForm.valid) {
       let temp = this.addMovieForm.getRawValue();
@@ -39,17 +42,23 @@ export class AddMovieComponent implements OnInit {
         time_slots:this.timeSlots
       }
       this.addMovie(this.movieItem);
-      console.log(this.addMovie);
-      
     }
   }
+
+  /**
+   * Pass the movie obj to backend
+   * @param movie : newly created movie obj
+   */
   private addMovie(movie){
     this.cinerService.addMovie(movie).subscribe(data =>{
       console.log('see');
-      
     });
   }
-  public addTimeSlot(movie) {
+
+  /**
+   * Add movie timeslots to timeslot array
+   */
+  public addTimeSlot() {
     let temp = this.addTimeSlotForm.getRawValue();
     this.timeSlots.push(temp.time_slots);
     console.log(this.timeSlots);

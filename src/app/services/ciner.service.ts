@@ -46,17 +46,15 @@ export class CinerService {
   */
   deleteMovie(movieId) {
     console.log('IAM ',movieId);   
-    return this.http.put(`${this.url}/deleteMovie/`+ movieId, {headers: this.headers});
+    return this.http.delete(`${this.url}/deleteMovie/`+ movieId, {headers: this.headers});
   }
 
   /**
-  * Add item to the local storage
-  * @param item : Target item
+  * Update the selected movie in database
+  * @param updatedMovie : updated movie item
   */
-  updateItem(item) {
-    const updateMovie = item;
-    console.log('IAM ',updateMovie);   
-    return this.http.put(`${this.url}/updateMovie`, updateMovie, {headers: this.headers});
+  updateMovie(updatedMovie,updatedMovieId) {  
+    return this.http.put(`${this.url}/updateMovie/{updatedMovieId}`, updatedMovie, {headers: this.headers});
   }
 
   /**

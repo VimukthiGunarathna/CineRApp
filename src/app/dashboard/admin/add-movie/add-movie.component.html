@@ -8,8 +8,8 @@
             formControlName="movie_desc" placeholder="enter movie description.."></textarea>
     </div>
     <div class="form-group">
-        <input type="number" class="form-control form-inputs" id="exampleFormControlInput1" formControlName="available_seats"
-            placeholder="seat capacity">
+        <input type="number" class="form-control form-inputs" id="exampleFormControlInput1"
+            formControlName="available_seats" placeholder="seat capacity">
     </div>
     <div class="form-group">
         <select class="form-control" id="exampleFormControlSelect1">
@@ -32,6 +32,9 @@
     <div class="slot-btn">
         <p>add time slots</p>
     </div>
+</div>
+<div class="submit-btn-wrapper">
+    <button type="button" class="btn btn-secondary submit-btn" (click)="onSubmit()">Submit</button>
 </div>
 <!-- Modal -->
 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
@@ -61,4 +64,3 @@
         </div>
     </div>
 </div>
-<button type="button" class="btn btn-secondary" (click)="onSubmit()">Submit</button>
