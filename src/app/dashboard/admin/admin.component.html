@@ -15,13 +15,16 @@
     <div class="middle-box">
         <div class="col-lg-6 left-box">
             <div class="left-box-content">
-                <div class="movie-card">
+                <div class="movie-card" *ngFor="let movie of allMovies">
                     <div class="movie-title">
-                        <h3>Movie Name</h3>
+                        <h3>{{movie.movie_name}}</h3>
                         <fa-icon class="icon-trash" [icon]="['fas', 'trash']">
                         </fa-icon>
                     </div>
-                    <p>Movie Description</p>
+                    <p>{{movie.movie_desc}}</p>
+                    <div class="time-slot" *ngFor="let slot of movie.movie_slots">
+                        <p>hey{{slot.time_slot}}</p>
+                    </div>
                 </div>
             </div>
         </div>

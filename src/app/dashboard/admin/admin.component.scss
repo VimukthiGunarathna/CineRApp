@@ -65,18 +65,19 @@
 .movie-card {
   .movie-title {
     display: flex;
-
-    p {
-      color: white;
-    }
-
     .icon-trash {
       color: #C76060;
       padding-left: 10px;
     }
   }
+  p {
+    color: white !important;
+  }
 
   h3 {
     color: white;
+  }
+  .time-slot {
+    display: flex;
   }
 }
