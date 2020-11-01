@@ -7,32 +7,27 @@
         <textarea class="form-control form-inputs" id="exampleFormControlTextarea1" rows="3"
             formControlName="movie_desc" placeholder="enter movie description.."></textarea>
     </div>
-    <div class="form-group">
-        <input type="number" class="form-control form-inputs" id="exampleFormControlInput1"
-            formControlName="available_seats" placeholder="seat capacity">
+    <div class="time-slot-wrapper">
+        <div class="time-slots" *ngFor="let slots of timeSlots">
+            <p>{{slots}}</p>
+        </div>
     </div>
-    <div class="form-group">
-        <select class="form-control" id="exampleFormControlSelect1">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-        </select>
+    <div class="seat-capacity">
+        <div class="form-group seat-input">
+            <input type="number" class="form-control form-inputs" id="exampleFormControlInput1"
+                formControlName="available_seats" placeholder="seat capacity">
+        </div>
+        <div class="add-time-slots" data-toggle="modal" data-target="#exampleModalCenter">
+            <div class="slot-icon">
+                <fa-icon class="icon-trash" [icon]="['fas', 'plus']">
+                </fa-icon>
+            </div>
+            <div class="slot-btn">
+                <p>add time slots</p>
+            </div>
+        </div>
     </div>
 </form>
-<div class="add-time-slots" data-toggle="modal" data-target="#exampleModalCenter">
-    <div class="time-slots" *ngFor="let slots of timeSlots">
-        <p>{{slots}}</p>
-    </div>
-    <div class="slot-icon">
-        <fa-icon class="icon-trash" [icon]="['fas', 'plus']">
-        </fa-icon>
-    </div>
-    <div class="slot-btn">
-        <p>add time slots</p>
-    </div>
-</div>
 <div class="submit-btn-wrapper">
     <button type="button" class="btn btn-secondary submit-btn" (click)="onSubmit()">Submit</button>
 </div>

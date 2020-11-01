@@ -25,16 +25,34 @@
     padding: 5px;
   }
 }
+
 .submit-btn-wrapper {
   display: flex;
   justify-content: flex-end;
 }
+
 .submit-btn {
   display: flex;
   background-color: #2DE566;
   justify-content: flex-end;
 }
+
 .form-control {
-  background-color: #182131!important;
+  background-color: #182131 !important;
   border: 1px solid #A4AAB5 !important;
+}
+
+.seat-capacity {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.time-slot-wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.seat-input {
+  width: 9.2em !important;
+  padding-right: 10px !important;
 }
