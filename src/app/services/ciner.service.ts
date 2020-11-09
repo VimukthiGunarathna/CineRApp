@@ -35,7 +35,7 @@ export class CinerService {
    * Add movie to database
    * @param movie : movie object
    */
-  addMovie(movie) {
+  public addMovie(movie) {
     console.log('IAM ', movie);
     return this.http.post(`${this.url}/addMovie`, movie, { headers: this.headers });
   }
@@ -44,7 +44,7 @@ export class CinerService {
   * Delete movie from database
   * @param movieId : movie id of the selected movie
   */
-  deleteMovie(movieId) {
+  public deleteMovie(movieId) {
     console.log('IAM ', movieId);
     return this.http.delete(`${this.url}/deleteMovie/` + movieId, { headers: this.headers });
   }
@@ -53,42 +53,16 @@ export class CinerService {
   * Update the selected movie in database
   * @param updatedMovie : updated movie item
   */
-  updateMovie(updatedMovie, updatedMovieId) {
+  public updateMovie(updatedMovie, updatedMovieId) {
     return this.http.put(`${this.url}/updateMovie/{updatedMovieId}`, updatedMovie, { headers: this.headers });
   }
 
-  /**
-   *  Replace the collections in the  local storage
-   * @param todo : updated todo Collection
-   * @param deleted : updated deleted Collection
-   * @param progress :updated in progress Collection
-   * @param done :updated done Collection
-   */
-  // replaceCollection(todo, deleted, progress, done) {
-  //   this.storage.replaceStorageCollections(todo, deleted, progress, done);
-  // }
-  /**
-  * String validation for title property
-  * @param userControl : user input dom values
-  */
-  // isTitleValid(userControl: AbstractControl) {
-  //   return new Promise(resolve => {
-  //     setTimeout(() => {
-  //       if (this.validateTitle(userControl.value)) {
-  //         resolve({ titleNotAvailable: true });
-  //       } else {
-  //         resolve(null);
-  //       }
-  //     }, 1000);
-  //   });
-  // }
+  public bookMovie(bookingItem) {
+    return this.http.post(`${this.url}/bookMovie/`, bookingItem, { headers: this.headers });
+  }
 
-  /**
-  * Search  title string in the collection 
-  * @param title : inserted title string 
-  */
-  // validateTitle(title: string) {
-  //   console.log(this.storage.validateTitle(title));
-  //   return (this.storage.validateTitle(title) > -1);
-  // }
+  public getBookings(movieId) {
+    return this.http.get(`${this.url}/getBookings/` + movieId, { headers: this.headers });
+  }
+
 }

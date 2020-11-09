@@ -12,24 +12,15 @@
                 </div>
                 <div class="modal-body view-item">
                     <form [formGroup]="booking_form">
-                        <span class="input-label">Movie name</span>
-                        <input class="form-control form-inputs" formControlName="movie_name"
-                            placeholder={{selectedMovie?.movie_name}}>
-                        <span class="input-label">Movie description</span>
-                        <input class="form-control form-inputs" formControlName="movie_desc"
-                            placeholder={{selectedMovie?.movie_desc}}>
+                        <span class="input-label">Movie name {{bookingItem?.movie_name}}</span>
+                        <span class="input-label">Movie description {{bookingItem?.movie_desc}}</span>
                         <span class="input-label">Seat capacity</span>
-                        <input class="form-control form-inputs" formControlName="availabe_seats"
-                            placeholder={{selectedMovie?.availabe_seats}}>
-                        <span class="input-label">Movie time slots </span>
-                        <form [formGroup]="addTimeSlotForm">
-                            <input class="form-control form-inputs" formControlName="time_slots">
-                        </form>
+                        <input class="form-control form-inputs" formControlName="tickets">
                     </form>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary form-btn" data-dismiss="modal"
-                        (click)="updateMovie()">Update</button>
+                        (click)="bookMovie()">Book</button>
                 </div>
             </div>
         </div>

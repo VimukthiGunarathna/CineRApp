@@ -12,11 +12,6 @@ import { BookingItemService } from 'src/app/shared/booking-item.service';
 })
 export class BookingComponent implements OnInit {
 
-  public allMoviesTemp;
-  public timeSlots;
-  public allMovies = [];
-  public addTimeSlots = [];
-
   public bookingItem
 
   // Forms
@@ -33,16 +28,27 @@ export class BookingComponent implements OnInit {
   ngOnInit(): void {
     this.bookingItemService.bookingItem.subscribe(data => {
       this.bookingItem = data;
-      console.log(data);
-      
     });
 
     this.booking_form = this.bookingForm.group({
-      movie_name: ['', [Validators.required,]],
-      movie_desc: ['', [Validators.required,]],
-      availabe_seats: ['', [Validators.required,]],
-      time_slots: ['', [Validators.required,]],
+      tickets: ['', [Validators.required,]],
     });
+  }
+  public bookMovie() {
+    if (this.booking_form.valid) {
+      let temp = this.booking_form.getRawValue();
+      let bookingItem = {
+        movie_id: this.bookingItem.movie_id,
+        slot_id: this.bookingItem.slot.slot_id,
+        customer_id: 1,
+        tickets: temp.tickets,
+      }
+      console.log(bookingItem);
+
+      this.cinerService.bookMovie(bookingItem).subscribe(res => {
+        console.log(res);
+      });
+    }
   }
 
 }
