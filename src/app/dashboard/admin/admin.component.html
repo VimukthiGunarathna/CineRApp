@@ -86,7 +86,7 @@
         </div>
         <div class="col-lg-6 right-box">
             <div class="right-box-content">
-                <app-add-movie></app-add-movie>
+                <app-add-movie (newMovieEvent)="receiveNewMovie($event)"></app-add-movie>
             </div>
         </div>
 

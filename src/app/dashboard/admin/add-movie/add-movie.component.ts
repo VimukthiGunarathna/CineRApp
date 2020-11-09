@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { CinerService } from 'src/app/services/ciner.service';
 
@@ -9,6 +9,7 @@ import { CinerService } from 'src/app/services/ciner.service';
 })
 export class AddMovieComponent implements OnInit {
 
+  @Output() newMovieEvent = new EventEmitter<object>();
   public addMovieForm;
   public addTimeSlotForm;
   public timeSlots = [];
@@ -39,7 +40,7 @@ export class AddMovieComponent implements OnInit {
         movie_name: temp.movie_name,
         movie_desc: temp.movie_desc,
         available_seats: temp.available_seats,
-        time_slots:this.timeSlots
+        time_slots: this.timeSlots
       }
       this.addMovie(this.movieItem);
     }
@@ -49,8 +50,9 @@ export class AddMovieComponent implements OnInit {
    * Pass the movie obj to backend
    * @param movie : newly created movie obj
    */
-  private addMovie(movie){
-    this.cinerService.addMovie(movie).subscribe(data =>{
+  private addMovie(movie) {
+    this.newMovieEvent.emit(movie);
+    this.cinerService.addMovie(movie).subscribe(data => {
       console.log('see');
     });
   }

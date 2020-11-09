@@ -1,8 +1,10 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { ThrowStmt } from '@angular/compiler';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { CinerService } from 'src/app/services/ciner.service';
+import { AddMovieComponent } from './add-movie/add-movie.component';
 
 @Component({
   selector: 'app-admin',
@@ -69,10 +71,7 @@ export class AdminComponent implements OnInit {
    */
   public deleteMovie(movie) {
     let id = movie.movie_id;
-    let index = this.allMovies.indexOf(id);
-    if (index !== -1) {
-      this.allMovies.splice(index, 1);
-    }
+    this.allMovies.splice(this.allMovies.indexOf(id), 1);
     this.cinerService.deleteMovie(id).subscribe(data => {
       console.log("deleted");
     });
@@ -92,7 +91,7 @@ export class AdminComponent implements OnInit {
     }
     console.log(this.updateMovieItem);
     let movieId = temp.movie_id;
-    this.cinerService.updateMovie(this.updateMovieItem,movieId).subscribe(data => {
+    this.cinerService.updateMovie(this.updateMovieItem, movieId).subscribe(data => {
       console.log('see');
     });
   }
@@ -113,5 +112,9 @@ export class AdminComponent implements OnInit {
   public selectedItem(item) {
     console.log(item);
     this.selectedMovie = item;
+  }
+
+  public receiveNewMovie($event) {
+    this.allMovies.push($event);
   }
 }

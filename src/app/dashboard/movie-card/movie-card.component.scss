@@ -34,15 +34,19 @@
           margin-bottom: 0rem;
         }
       }
+
       .movie-slots {
         display: flex;
+
         .slot {
           color: #DED9D9;
           padding: 10px;
+
           p {
             border: 1px solid #f5eded;
             border-radius: 5px;
             padding: 5px;
+
             &:hover {
               cursor: pointer;
               background-color: #404b5a;
@@ -52,4 +56,9 @@
       }
     }
   }
+}
+
+.movie-slots-heading {
+  padding-top: 10px;
+  color: white;
 }
