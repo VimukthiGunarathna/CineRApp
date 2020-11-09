@@ -10,10 +10,10 @@ export class CinerService {
 
   headers = new HttpHeaders({
     'Content-Type': 'application/json; charset=utf-8',
-    'Access-Control-Allow-Origin':'*'
+    'Access-Control-Allow-Origin': '*'
   });
   public url = 'http://localhost:8080';
-  constructor( private http:HttpClient) { }
+  constructor(private http: HttpClient) { }
 
 
   /**
@@ -28,7 +28,7 @@ export class CinerService {
    * @param id : Movie id
    */
   public getMovieTimeSlots(id) {
-    return this.http.get(`${this.url}/getTimeSlots/`+id, { headers: this.headers });
+    return this.http.get(`${this.url}/getTimeSlots/` + id, { headers: this.headers });
   }
 
   /**
@@ -36,8 +36,8 @@ export class CinerService {
    * @param movie : movie object
    */
   addMovie(movie) {
-    console.log('IAM ',movie);   
-    return this.http.post(`${this.url}/addMovie`, movie, {headers: this.headers});
+    console.log('IAM ', movie);
+    return this.http.post(`${this.url}/addMovie`, movie, { headers: this.headers });
   }
 
   /**
@@ -45,16 +45,16 @@ export class CinerService {
   * @param movieId : movie id of the selected movie
   */
   deleteMovie(movieId) {
-    console.log('IAM ',movieId);   
-    return this.http.delete(`${this.url}/deleteMovie/`+ movieId, {headers: this.headers});
+    console.log('IAM ', movieId);
+    return this.http.delete(`${this.url}/deleteMovie/` + movieId, { headers: this.headers });
   }
 
   /**
   * Update the selected movie in database
   * @param updatedMovie : updated movie item
   */
-  updateMovie(updatedMovie,updatedMovieId) {  
-    return this.http.put(`${this.url}/updateMovie/{updatedMovieId}`, updatedMovie, {headers: this.headers});
+  updateMovie(updatedMovie, updatedMovieId) {
+    return this.http.put(`${this.url}/updateMovie/{updatedMovieId}`, updatedMovie, { headers: this.headers });
   }
 
   /**

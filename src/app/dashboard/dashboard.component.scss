@@ -57,11 +57,22 @@
   }
 
   .icon {
+    
+  }
+
+  .drop-icon {
     position: absolute;
     top: 20px;
     right: 7px;
     font-size: 19px;
     color: white;
+    
+    padding-left: 12px;
+    color: white;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 }
 
@@ -74,6 +85,7 @@
 
 .middle-box {
   padding: 10px 45px 0px 45px;
+
   .middle-box-topic {
     font-size: 20px;
     color: white;

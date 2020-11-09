@@ -16,8 +16,15 @@
                 <div class="profile-img-box" routerLink="/admin" routerLinkActive="active">
                     <div class="profile-img"></div>
                 </div>
-                <div class="icon">
-                    <fa-icon [icon]="['fas', 'chevron-down']"></fa-icon>
+                <div class="dropdown">
+                    <div class="icon drop-icon">
+                        <fa-icon [icon]="['fas', 'chevron-down']"></fa-icon>
+                    </div>
+                    <fa-icon class="drop-icon" [icon]="['fas', 'chevron-down']" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></fa-icon>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" data-toggle="modal" data-target="#updateMovie">Admin View</a>
+                    </div>
                 </div>
             </div>
         </div>
