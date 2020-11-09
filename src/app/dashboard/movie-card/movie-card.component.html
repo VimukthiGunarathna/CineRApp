@@ -8,11 +8,15 @@
             <div class="movie-desc">
                 <p>{{movie.movie_desc}}</p>
             </div>
-            <div class="movie-slots">
-                <div class="slot" *ngFor="let slot of movie.movie_slots">
+            <div>
+                <p>Movie time slots</p>
+            </div>
+            <div class="movie-slots" (click)="bookMovieServiceUpdate(movie)">
+                <div class="slot" *ngFor="let slot of movie.movie_slots" data-toggle="modal" data-target="#updateMovie">
                     <p>{{slot.time_slot}}</p>
                 </div>
             </div>
+            <app-booking></app-booking>
         </div>
     </div>
 </div>

@@ -13,6 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AddMovieComponent } from './dashboard/admin/add-movie/add-movie.component';
 import { MovieCardComponent } from './dashboard/movie-card/movie-card.component';
+import { BookingComponent } from './dashboard/movie-card/booking/booking.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { MovieCardComponent } from './dashboard/movie-card/movie-card.component'
     DashboardComponent,
     AdminComponent,
     AddMovieComponent,
-    MovieCardComponent
+    MovieCardComponent,
+    BookingComponent
   ],
   imports: [
     BrowserModule,
