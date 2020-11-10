@@ -1,7 +1,12 @@
-.top-nav {}
+.top-nav {
+  padding: 5px 25px 5px 25px;
+}
 
 .navbar-brand {
   .brand-img {
+    width: 227px;
+    height: 83px;
+
     img {
       width: 227px;
       height: 83px;
@@ -30,12 +35,24 @@
     }
 
     color: #413382;
-    padding-left: 70px;
+    padding-left: 35px;
   }
 }
 
 .user-profile {
-  padding-left: 70px;
+  padding-left: 35px;
+  display: flex;
+
+  .acc-name {
+    color: white;
+    display: flex;
+    font-size: 18px;
+    justify-content: center;
+    align-items: center;
+    width: 10em;
+    padding: 0px 10px 0px 10px;
+    font-weight: 100;
+  }
 
   .profile-img {
     width: 4em;
@@ -43,5 +60,14 @@
     background-image: url("../../../assets/prof.jpg");
     border-radius: 50%;
     background-size: cover;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
+}
+
+.search-bar {
+  background-color: #182131;
+  border: 1px solid #293242;
 }

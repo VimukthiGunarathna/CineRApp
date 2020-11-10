@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BookingItemService } from '../booking-item.service';
 
 @Component({
   selector: 'app-top-nav',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TopNavComponent implements OnInit {
 
-  constructor() { }
+  public notifications; // notification counter
+  constructor(
+    private bookingItem: BookingItemService
+  ) { }
 
   ngOnInit(): void {
+    this.bookingItem.bookingItem.subscribe(data => {
+      this.notifications = data.length;
+    });
   }
 
 }

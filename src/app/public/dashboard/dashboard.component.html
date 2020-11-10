@@ -1,32 +1,7 @@
 <div class="white-container">
     <div class="header-box">
-        <div class="col-lg-4 logo-wrapper">
-            <div class="logo-box">
-                <img src="../../../assets/Untitled-1.png" alt=" ciner_logo">
-            </div>
-        </div>
-        <div class="col-lg-4 nav-btn-wrapper">
-
-        </div>
-        <div class="col-lg-4 profile-wrapper">
-            <div class="profile-content">
-                <div class="profile-details-box">
-                    <p>WELCOME, Vimukthi Gunarathna</p>
-                </div>
-                <div class="profile-img-box" routerLink="/admin" routerLinkActive="active">
-                    <div class="profile-img"></div>
-                </div>
-                <div class="dropdown">
-                    <div class="icon drop-icon">
-                        <fa-icon [icon]="['fas', 'chevron-down']"></fa-icon>
-                    </div>
-                    <fa-icon class="drop-icon" [icon]="['fas', 'chevron-down']" id="dropdownMenuButton"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></fa-icon>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" routerLink="/admin" routerLinkActive="active">Admin View</a>
-                    </div>
-                </div>
-            </div>
+        <div class="top-nav-wrapper">
+            <app-top-nav></app-top-nav>
         </div>
     </div>
     <div class="cover-box">
@@ -36,7 +11,8 @@
     </div>
     <div class="middle-box">
         <div class="middle-box-topic">
-            <p>All Movies In Theatre</p>
+            <h1>Most Recent Movies</h1>
+            <p>All the recently released movies</p>
         </div>
         <div class="movie-card-wrapper">
             <app-movie-card></app-movie-card>

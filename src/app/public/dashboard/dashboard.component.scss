@@ -5,7 +5,6 @@
 }
 
 .header-box {
-  display: flex;
   background-color: #182131;
 }
 
@@ -55,17 +54,13 @@
     }
   }
 
-  .icon {
-    
-  }
-
   .drop-icon {
     position: absolute;
     top: 20px;
     right: 7px;
     font-size: 19px;
     color: white;
-    
+
     padding-left: 12px;
     color: white;
 
@@ -87,8 +82,15 @@
 
   .middle-box-topic {
     color: white;
-    font-size: 27px;
-    font-weight: 400;
     padding: 1em;
+    h1 {
+      font-size: 38px;
+      margin-bottom: 5px;
+    }
+
+    p {
+      font-size: 19px;
+      font-style: italic;
+    }
   }
 }
