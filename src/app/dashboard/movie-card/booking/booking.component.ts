@@ -28,6 +28,20 @@ export class BookingComponent implements OnInit {
   ngOnInit(): void {
     this.bookingItemService.bookingItem.subscribe(data => {
       this.bookingItem = data;
+      //console.log(data);
+      this.cinerService.getBookings(this.bookingItem.slot.slot_id).subscribe(data => {
+        const obj = {
+          'movie_desc': this.bookingItem.movie_desc,
+          'movie_id': this.bookingItem.movie_id,
+          'movie_name': this.bookingItem.movie_name,
+          'availabe_seats': this.bookingItem.availabe_seats,
+          'slot': this.bookingItem.slot,
+          'booking': data
+        }
+        this.bookingItem = obj;
+        console.log(this.bookingItem);
+        
+      });
     });
 
     this.booking_form = this.bookingForm.group({

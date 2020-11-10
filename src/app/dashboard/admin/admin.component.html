@@ -59,7 +59,7 @@
                                 <input class="form-control form-inputs" formControlName="movie_desc"
                                     placeholder={{selectedMovie?.movie_desc}}>
                                 <span class="input-label">Seat capacity</span>
-                                <input class="form-control form-inputs" formControlName="availabe_seats"
+                                <input type="number"  class="form-control form-inputs" formControlName="availabe_seats"
                                     placeholder={{selectedMovie?.availabe_seats}}>
                                 <span class="input-label">Movie time slots </span>
                                 <form [formGroup]="addTimeSlotForm">

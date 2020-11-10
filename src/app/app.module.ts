@@ -14,6 +14,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AddMovieComponent } from './dashboard/admin/add-movie/add-movie.component';
 import { MovieCardComponent } from './dashboard/movie-card/movie-card.component';
 import { BookingComponent } from './dashboard/movie-card/booking/booking.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -31,13 +33,14 @@ import { BookingComponent } from './dashboard/movie-card/booking/booking.compone
     FontAwesomeModule,
     ReactiveFormsModule,
     FormsModule,
-    
+    BrowserAnimationsModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { 
+export class AppModule {
   constructor(private library: FaIconLibrary) {
-    library.addIcons(faSquare, faCheckSquare, faCog, faPlus,faPlusSquare,faEllipsisV,faTrash,faAngleDown, faChevronDown);
+    library.addIcons(faSquare, faCheckSquare, faCog, faPlus, faPlusSquare, faEllipsisV, faTrash, faAngleDown, faChevronDown);
   }
 }

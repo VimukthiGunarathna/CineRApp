@@ -10,10 +10,17 @@ import { BookingItemService } from 'src/app/shared/booking-item.service';
 export class MovieCardComponent implements OnInit {
 
   public allMoviesTemp;
-  public timeSlots;
+  public timeSlotsTemp;
+
+
+  public bookings;
+
   public allMovies = [];
-  public addTimeSlots = [];
+  // public addTimeSlots = [];
+  public timeSlots = [];
+
   public booking_item;
+
 
   constructor(
     private cinerService: CinerService,
@@ -24,11 +31,10 @@ export class MovieCardComponent implements OnInit {
     // Get all movies to the temp array 
     this.cinerService.getAllMovies().subscribe(data => {
       this.allMoviesTemp = data;
-
       // Get time slots for each movie
       this.allMoviesTemp.forEach(x => {
         this.cinerService.getMovieTimeSlots(x.movie_id).subscribe(data => {
-          this.timeSlots = data;
+          this.timeSlotsTemp = data;
           const obj = {
             'movie_id': x.movie_id,
             'movie_name': x.movie_name,
@@ -39,7 +45,6 @@ export class MovieCardComponent implements OnInit {
           this.allMovies.push(obj); // New movie array inclusive of timeslots
         })
       });
-
     });
   }
 

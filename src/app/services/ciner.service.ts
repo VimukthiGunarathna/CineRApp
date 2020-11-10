@@ -61,8 +61,8 @@ export class CinerService {
     return this.http.post(`${this.url}/bookMovie/`, bookingItem, { headers: this.headers });
   }
 
-  public getBookings(movieId) {
-    return this.http.get(`${this.url}/getBookings/` + movieId, { headers: this.headers });
+  public getBookings(slotId) {
+    return this.http.get(`${this.url}/getNumberOfBookings/` + slotId, { headers: this.headers });
   }
 
 }
