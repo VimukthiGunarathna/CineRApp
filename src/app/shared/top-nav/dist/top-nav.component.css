@@ -3,12 +3,16 @@
 }
 
 .navbar-brand .brand-img {
-  width: 227px;
-  height: 83px;
+  width: 5em;
+  height: 2em;
 }
 .navbar-brand .brand-img img {
-  width: 227px;
-  height: 83px;
+  width: 6em;
+  height: 2em;
+}
+
+.height {
+  height: 2em;
 }
 
 .nav-bar {
@@ -32,31 +36,46 @@
 }
 
 .user-profile {
-  padding-left: 35px;
   display: flex;
+  padding-left: 2em;
 }
 .user-profile .acc-name {
   color: white;
-  display: flex;
-  font-size: 18px;
-  justify-content: center;
-  align-items: center;
-  width: 10em;
-  padding: 0px 10px 0px 10px;
+  text-align: center;
+  align-self: center;
+  padding: 0px 10px 7px 0px;
   font-weight: 100;
 }
-.user-profile .profile-img {
+.user-profile .acc-name .name p {
+  margin: 0 !important;
+  font-size: 15px;
+  text-align: right;
+}
+.user-profile .acc-name .welcome p {
+  margin: 0 !important;
+  text-align: right;
+  font-weight: 500;
+  font-size: 17px;
+}
+.user-profile .profile-img-wrapper {
+  padding-bottom: 6px;
+}
+.user-profile .profile-img-wrapper .profile-img {
   width: 4em;
   height: 4em;
   background-image: url("../../../assets/prof.jpg");
   border-radius: 50%;
   background-size: cover;
 }
-.user-profile .profile-img:hover {
+.user-profile .profile-img-wrapper .profile-img:hover {
   cursor: pointer;
 }
 
 .search-bar {
   background-color: #182131;
-  border: 1px solid #293242;
+  border-radius: 0 !important;
+  border: none !important;
+  width: 341px !important;
+  height: 35px !important;
+  box-shadow: 0px 1px 15px 1px #0000003b;
 }

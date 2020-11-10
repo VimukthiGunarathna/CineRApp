@@ -26,6 +26,9 @@ var snack_bar_1 = require("@angular/material/snack-bar");
 var top_nav_component_1 = require("./shared/top-nav/top-nav.component");
 var badge_1 = require("@angular/material/badge");
 var icon_1 = require("@angular/material/icon");
+var cover_box_component_1 = require("./public/dashboard/cover-box/cover-box.component");
+var angular_bootstrap_md_1 = require("angular-bootstrap-md");
+var angular_bootstrap_md_2 = require("angular-bootstrap-md");
 var AppModule = /** @class */ (function () {
     function AppModule(library) {
         this.library = library;
@@ -40,7 +43,8 @@ var AppModule = /** @class */ (function () {
                 add_movie_component_1.AddMovieComponent,
                 movie_card_component_1.MovieCardComponent,
                 book_movie_component_1.BookMovieComponent,
-                top_nav_component_1.TopNavComponent
+                top_nav_component_1.TopNavComponent,
+                cover_box_component_1.CoverBoxComponent
             ],
             imports: [
                 platform_browser_1.BrowserModule,
@@ -52,7 +56,10 @@ var AppModule = /** @class */ (function () {
                 animations_1.BrowserAnimationsModule,
                 snack_bar_1.MatSnackBarModule,
                 badge_1.MatBadgeModule,
-                icon_1.MatIconModule
+                icon_1.MatIconModule,
+                angular_bootstrap_md_1.CarouselModule,
+                angular_bootstrap_md_1.WavesModule,
+                angular_bootstrap_md_2.MDBBootstrapModule.forRoot()
             ],
             providers: [],
             bootstrap: [app_component_1.AppComponent]

@@ -3,27 +3,34 @@
         <a class="navbar-brand" routerLink="/dashboard" routerLinkActive="active">
             <img class="brand-img" src="../../../assets/Untitled-1.png" alt="org logo">
         </a>
-        <div class="collapse navbar-collapse nav-bar" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse nav-bar height" id="navbarSupportedContent">
             <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2 search-bar" type="search" placeholder="Search" aria-label="Search"
                     placeholder="Search movie">
             </form>
-            <div class="user-cart">
+            <!-- <div class="user-cart">
                 <div class="cart">
                     <i [matBadge]="notifications" matBadgeColor="warn" class="material-icons" routerLink="/cart"
                         routerLinkActive="active">
                         shopping_bag
                     </i>
                 </div>
-            </div>
+            </div> -->
             <div class="user-profile">
                 <div class="acc-name">
-                    <p>Welcome,Vimukthi Gunarathna</p>
+                    <div class="welcome">
+                        <p>Welcome</p>
+                    </div>
+                    <div class="name">
+                        <p>Vimukthi Gunarathna</p>
+                    </div>
                 </div>
-                <div class="profile-img" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
-                    aria-expanded="false"></div>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" routerLink="/admin" routerLinkActive="active">Admin View</a>
+                <div class="profile-img-wrapper">
+                    <div class="profile-img" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false"></div>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" routerLink="/admin" routerLinkActive="active">Admin View</a>
+                    </div>
                 </div>
             </div>
         </div>

@@ -1,0 +1,62 @@
+.movie-card-container {
+  display: flex;
+  padding: 0em 3em 0em 3em;
+}
+.movie-card-container .movie-card {
+  padding: 0em 2em 0em 0em;
+  margin-bottom: 3em;
+  width: 20em;
+}
+.movie-card-container .movie-card img {
+  width: 100%;
+}
+.movie-card-container .movie-card .movie-content {
+  background-color: #151F2E;
+  border-radius: 0px 0px 5px 5px;
+  padding: 1em 0em 1em 1em;
+}
+.movie-card-container .movie-card .movie-content .movie-title {
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+}
+.movie-card-container .movie-card .movie-content .movie-title p {
+  margin-bottom: 0rem;
+}
+.movie-card-container .movie-card .movie-content .movie-desc {
+  color: #DED9D9;
+  font-size: 13px;
+  font-weight: 300;
+}
+.movie-card-container .movie-card .movie-content .movie-desc p {
+  margin-bottom: 0rem;
+}
+.movie-card-container .movie-card .movie-content .movie-slots {
+  display: flex;
+}
+.movie-card-container .movie-card .movie-content .movie-slots .slot {
+  color: #DED9D9;
+  padding: 10px;
+}
+.movie-card-container .movie-card .movie-content .movie-slots .slot p {
+  border: 1px solid #f5eded;
+  border-radius: 5px;
+  padding: 5px;
+}
+.movie-card-container .movie-card .movie-content .movie-slots .slot p:hover {
+  cursor: pointer;
+  background-color: #404b5a;
+}
+
+.movie-slots-heading {
+  padding-top: 10px;
+  color: white;
+}
+
+.text-center {
+  background-color: #151F2E !important;
+}
+
+.card-title {
+  color: white;
+}

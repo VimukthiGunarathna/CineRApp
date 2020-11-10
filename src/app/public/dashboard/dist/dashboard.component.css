@@ -1,11 +1,28 @@
 .white-container {
-  background-color: #0F0F10;
+  background: #3d3d41;
+  background: linear-gradient(180deg, rgba(61, 61, 65, 0.962622549) 0%, #151517 49%);
   min-height: stretch;
   max-height: max-content;
 }
 
 .header-box {
+  z-index: 9;
+  display: flex;
+  justify-content: center;
+  height: 50em;
+}
+
+.top-nav-wrapper {
+  top: 1em;
+  position: absolute;
+  width: 85%;
   background-color: #182131;
+  box-shadow: 0px 3px 13px 12px #212020a6;
+  position: relative;
+  z-index: 9;
+  border: 1px solid #58505000;
+  border-radius: 4em;
+  height: 5em;
 }
 
 .logo-wrapper {
@@ -18,52 +35,10 @@
   width: 13em;
 }
 
-.profile-wrapper {
-  text-align: end;
-}
-.profile-wrapper .profile-content {
-  display: flex;
-  justify-content: flex-end;
-  padding: 12px 10px 10px 10px;
-}
-.profile-wrapper .profile-content .profile-img-box {
-  position: relative;
-}
-.profile-wrapper .profile-content .profile-img-box .profile-img {
-  width: 4em;
-  height: 4em;
-  background-image: url("../../../assets/prof.jpg");
-  border-radius: 50%;
-  background-size: cover;
-}
-.profile-wrapper .profile-content .profile-details-box {
-  text-align: start;
-  padding: 0px 10px 0px 0px;
-  position: relative;
-  font-size: 20px;
-  color: white;
-  font-weight: 100;
+.cover-box-wrapper {
   position: absolute;
-  top: 18px;
-  right: 92px;
-}
-.profile-wrapper .drop-icon {
-  position: absolute;
-  top: 20px;
-  right: 7px;
-  font-size: 19px;
-  color: white;
-  padding-left: 12px;
-  color: white;
-}
-.profile-wrapper .drop-icon:hover {
-  cursor: pointer;
 }
 
-.cover-box {
-  display: flex;
-  justify-content: center;
-}
 .middle-box {
   padding: 10px 45px 0px 45px;
 }

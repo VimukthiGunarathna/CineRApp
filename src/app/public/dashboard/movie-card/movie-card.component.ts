@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CinerService } from 'src/app/services/ciner.service';
+import { MovieImagesService } from 'src/app/services/movie-images.service';
 import { BookingItemService } from 'src/app/shared/booking-item.service';
 
 @Component({
@@ -9,6 +10,12 @@ import { BookingItemService } from 'src/app/shared/booking-item.service';
 })
 export class MovieCardComponent implements OnInit {
 
+  public cover_photos = [];
+  public base_url;
+  public movie_images_temp;
+  public movie_image;
+  public slides: any = [[]];
+
   public allMoviesTemp;
   public timeSlotsTemp;
 
@@ -16,7 +23,6 @@ export class MovieCardComponent implements OnInit {
   public bookings;
 
   public allMovies = [];
-  // public addTimeSlots = [];
   public timeSlots = [];
 
   public booking_item;
@@ -24,10 +30,29 @@ export class MovieCardComponent implements OnInit {
 
   constructor(
     private cinerService: CinerService,
-    private bookingItemService: BookingItemService
+    private bookingItemService: BookingItemService,
+    private coverlistService: MovieImagesService
   ) { }
 
   ngOnInit(): void {
+    //Get configurations 
+    this.coverlistService.getConfig().subscribe(data => {
+      this.base_url = data.images.base_url + 'original';
+      console.log(this.base_url);
+      // Get all tv posters to the temp array 
+      this.coverlistService.getTrendingMovies().subscribe(data => {
+        console.log(data.results);
+        this.movie_images_temp = data.results;
+        this.movie_images_temp.forEach(element => {
+          this.cover_photos.push(this.base_url + element.poster_path);
+        });
+        this.movie_image = this.cover_photos.slice(0, 1)
+        // this.cover_photos = this.cover_photos.slice(1, 4);
+        console.log(this.cover_photos);
+        this.slides = this.chunk(this.cover_photos, 4);
+      });
+    });
+
     // Get all movies to the temp array 
     this.cinerService.getAllMovies().subscribe(data => {
       this.allMoviesTemp = data;
@@ -59,6 +84,14 @@ export class MovieCardComponent implements OnInit {
     console.log(item);
     this.booking_item = item;
     this.bookingItemService.updateBookingItem(item);
+  }
+
+  public chunk(arr: any, chunkSize: any) {
+    let R = [];
+    for (let i = 0; i < arr.length; i += chunkSize) {
+      R.push(arr.slice(i, i + chunkSize));
+    }
+    return R;
   }
 
 }

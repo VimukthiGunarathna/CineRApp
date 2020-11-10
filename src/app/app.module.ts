@@ -19,6 +19,9 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { TopNavComponent } from './shared/top-nav/top-nav.component';
 import { MatBadgeModule } from '@angular/material/badge';
 import {MatIconModule} from '@angular/material/icon';
+import { CoverBoxComponent } from './public/dashboard/cover-box/cover-box.component';
+import { CarouselModule, WavesModule } from 'angular-bootstrap-md'
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 
 
@@ -30,7 +33,8 @@ import {MatIconModule} from '@angular/material/icon';
     AddMovieComponent,
     MovieCardComponent,
     BookMovieComponent,
-    TopNavComponent
+    TopNavComponent,
+    CoverBoxComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +46,10 @@ import {MatIconModule} from '@angular/material/icon';
     BrowserAnimationsModule,
     MatSnackBarModule,
     MatBadgeModule,
-    MatIconModule
+    MatIconModule,
+    CarouselModule,
+    WavesModule,
+    MDBBootstrapModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
