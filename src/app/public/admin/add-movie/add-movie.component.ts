@@ -55,7 +55,8 @@ export class AddMovieComponent implements OnInit {
         available_seats: temp.available_seats,
         time_slots: this.timeSlots
       }
-      //this.addMovie(this.movieItem);
+      this.addMovie(this.movieItem);
+      this.timeSlots = null;
       this.addMovieForm.reset();
     }
 

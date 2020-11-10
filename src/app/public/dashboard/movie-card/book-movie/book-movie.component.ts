@@ -6,11 +6,11 @@ import { CinerService } from 'src/app/services/ciner.service';
 import { BookingItemService } from 'src/app/shared/booking-item.service';
 
 @Component({
-  selector: 'app-booking',
-  templateUrl: './booking.component.html',
-  styleUrls: ['./booking.component.scss']
+  selector: 'app-book-movie',
+  templateUrl: './book-movie.component.html',
+  styleUrls: ['./book-movie.component.scss']
 })
-export class BookingComponent implements OnInit {
+export class BookMovieComponent implements OnInit {
 
   public bookingItem
 
@@ -40,7 +40,7 @@ export class BookingComponent implements OnInit {
         }
         this.bookingItem = obj;
         console.log(this.bookingItem);
-        
+
       });
     });
 

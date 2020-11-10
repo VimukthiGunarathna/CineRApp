@@ -36,6 +36,8 @@ export class CinerService {
    * @param movie : movie object
    */
   public addMovie(movie) {
+    console.log(movie);
+    
     console.log('IAM ', movie);
     return this.http.post(`${this.url}/addMovie`, movie, { headers: this.headers });
   }
