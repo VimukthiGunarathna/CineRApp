@@ -47,16 +47,16 @@ export class AddMovieComponent implements OnInit {
   public onSubmit() {
     let temp = this.addMovieForm.getRawValue();
     if (temp.available_seats > 10) {
-      this.isMax = true;
+      this.errorAlerts('seatLenght');
     } else {
-      this.isMax = false;
       this.movieItem = {
         movie_name: temp.movie_name,
         movie_desc: temp.movie_desc,
         available_seats: temp.available_seats,
         time_slots: this.timeSlots
       }
-      this.addMovie(this.movieItem);
+      //this.addMovie(this.movieItem);
+      this.addMovieForm.reset();
     }
 
   }
@@ -79,6 +79,22 @@ export class AddMovieComponent implements OnInit {
     let temp = this.addTimeSlotForm.getRawValue();
     this.timeSlots.push(temp.time_slots);
     console.log(this.timeSlots);
+  }
+
+  /**
+  * Show notifications to user 
+  * @param movie : new movie item inserted by user
+  */
+  public errorAlerts(type) {
+    this.timeSlots = null;
+    this.addMovieForm.reset();
+    if (type == 'seatLenght') {
+      this._snackBar.open('Maximum seating capacity is 10', 'Close', {
+        duration: 1000,
+        horizontalPosition: this.horizontalPosition,
+        verticalPosition: this.verticalPosition,
+      });
+    }
   }
 
   /**

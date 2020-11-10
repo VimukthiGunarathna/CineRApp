@@ -44,7 +44,7 @@ export class AdminComponent implements OnInit {
             'movie_name': element.movie_name,
             'movie_desc': element.movie_desc,
             'availabe_seats': element.available_seats,
-            'movie_slots': data
+            'time_slots': data
           }
           this.allMovies.push(obj); // New movie array inclusive of timeslots
         })
