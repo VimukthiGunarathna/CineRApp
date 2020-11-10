@@ -33,12 +33,11 @@
 
 .submit-btn {
   display: flex;
-  background-color: #2DE566;
+  background-color: #25b953;
   justify-content: flex-end;
 }
 
 .form-control {
-  background-color: #182131 !important;
   border: 1px solid #A4AAB5 !important;
 }
 
@@ -55,4 +54,10 @@
 .seat-input {
   width: 9.2em !important;
   padding-right: 10px !important;
+}
+
+.submit-btn-1 {
+  background-color: #25b953;
+  border-color: #25b953;
+  width: 5em;
 }

@@ -1,0 +1,24 @@
+<div class="movie-card-container">
+    <div class="movie-card col-lg-2" *ngFor="let movie of allMovies">
+        <img src="../../../assets/thumbnail.png" alt=" ciner_logo">
+        <div class="movie-content">
+            <div class="movie-title">
+                <p>{{movie.movie_name}}</p>
+            </div>
+            <div class="movie-desc">
+                <p>{{movie.movie_desc}}</p>
+            </div>
+            <div class="movie-slots-heading">
+                <p>Movie time slots</p>
+            </div>
+            <div class="movie-slots">
+                <div class="slot" *ngFor="let slot of movie.movie_slots" data-toggle="modal" data-target="#updateMovie">
+                    <div (click)="bookMovieServiceUpdate(movie,slot)">
+                        <p>{{slot.time_slot}}</p>
+                    </div>
+                </div>
+            </div>
+            <app-book-movie></app-book-movie>
+        </div>
+    </div>
+</div>

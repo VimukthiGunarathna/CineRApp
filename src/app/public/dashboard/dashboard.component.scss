@@ -2,11 +2,9 @@
   background-color: #0F0F10;
   min-height: stretch;
   max-height: max-content;
-  height: 100em;
 }
 
 .header-box {
-  display: flex;
   background-color: #182131;
 }
 
@@ -36,7 +34,7 @@
       .profile-img {
         width: 4em;
         height: 4em;
-        background-image: url("../../assets/prof.jpg");
+        background-image: url("../../../assets/prof.jpg");
         border-radius: 50%;
         background-size: cover;
       }
@@ -56,12 +54,19 @@
     }
   }
 
-  .icon {
+  .drop-icon {
     position: absolute;
     top: 20px;
     right: 7px;
     font-size: 19px;
     color: white;
+
+    padding-left: 12px;
+    color: white;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 }
 
@@ -74,9 +79,18 @@
 
 .middle-box {
   padding: 10px 45px 0px 45px;
+
   .middle-box-topic {
-    font-size: 20px;
     color: white;
-    font-weight: 300;
+    padding: 1em;
+    h1 {
+      font-size: 38px;
+      margin-bottom: 5px;
+    }
+
+    p {
+      font-size: 19px;
+      font-style: italic;
+    }
   }
 }

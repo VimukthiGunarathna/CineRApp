@@ -45,16 +45,14 @@
             <div class="modal-body">
                 <form [formGroup]="addTimeSlotForm">
                     <div class="form-group">
-                        <input class="form-control form-inputs" formControlName="time_slots" placeholder="time slots">
-                        <!-- <span class="text-danger"
-                            *ngIf="todoItemFormControl.title.touched && todoItemFormControl.title.errors?.titleNotAvailable">
-                            This title is already taken
-                        </span> -->
+                        <input class="form-control form-inputs" formControlName="time_slots"
+                            placeholder="Ex - 2.30-4.30">
                     </div>
                 </form>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-primary" (click)="addTimeSlot()" data-dismiss="modal">Add</button>
+                <button type="button" class="btn btn-primary submit-btn-1" (click)="addTimeSlot()"
+                    data-dismiss="modal">Add</button>
             </div>
         </div>
     </div>

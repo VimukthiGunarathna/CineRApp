@@ -1,0 +1,81 @@
+.white-container {
+  background-color: #0F0F10;
+  min-height: stretch;
+  max-height: max-content;
+}
+
+.header-box {
+  background-color: #182131;
+}
+
+.logo-wrapper {
+  position: relative;
+}
+.logo-wrapper .logo-box {
+  text-align: start;
+}
+.logo-wrapper .logo-box img {
+  width: 13em;
+}
+
+.profile-wrapper {
+  text-align: end;
+}
+.profile-wrapper .profile-content {
+  display: flex;
+  justify-content: flex-end;
+  padding: 12px 10px 10px 10px;
+}
+.profile-wrapper .profile-content .profile-img-box {
+  position: relative;
+}
+.profile-wrapper .profile-content .profile-img-box .profile-img {
+  width: 4em;
+  height: 4em;
+  background-image: url("../../../assets/prof.jpg");
+  border-radius: 50%;
+  background-size: cover;
+}
+.profile-wrapper .profile-content .profile-details-box {
+  text-align: start;
+  padding: 0px 10px 0px 0px;
+  position: relative;
+  font-size: 20px;
+  color: white;
+  font-weight: 100;
+  position: absolute;
+  top: 18px;
+  right: 92px;
+}
+.profile-wrapper .drop-icon {
+  position: absolute;
+  top: 20px;
+  right: 7px;
+  font-size: 19px;
+  color: white;
+  padding-left: 12px;
+  color: white;
+}
+.profile-wrapper .drop-icon:hover {
+  cursor: pointer;
+}
+
+.cover-box {
+  display: flex;
+  justify-content: center;
+}
+.middle-box {
+  padding: 10px 45px 0px 45px;
+}
+.middle-box .middle-box-topic {
+  color: white;
+  padding: 1em;
+}
+.middle-box .middle-box-topic h1 {
+  font-size: 38px;
+  margin-bottom: 5px;
+}
+.middle-box .middle-box-topic p {
+  font-size: 19px;
+  font-style: italic;
+}

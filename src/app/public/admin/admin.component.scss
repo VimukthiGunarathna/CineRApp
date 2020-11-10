@@ -10,7 +10,6 @@
   justify-content: center;
 
   .welcome-box {
-    font-size: 28px;
     font-weight: 100;
   }
 
@@ -79,8 +78,10 @@
 }
 
 .movie-card {
+  padding: 2em;
   .movie-title {
     display: flex;
+    font-size: 23px;
 
     .icon-trash {
       color: #C76060;
@@ -94,17 +95,25 @@
 
   p {
     color: white !important;
+    font-size: 19px;
+    font-weight: 100;
   }
 
   h3 {
     color: white;
+    font-size: 24px;
+    font-weight: 400;
   }
 
   .time-slot {
     display: flex;
 
     .slot {
-      padding-left: 10px;
+      border: 1px solid black;
+      border-radius: 5px;
+      text-align: center;
+      padding: 9px 9px 0px 9px;
+      margin-right: 6px;
     }
   }
 }
