@@ -67,6 +67,13 @@
 .text-center {
   background-color: #151F2E !important;
 }
-.card-title{
+
+.card-title {
   color: white;
+}
+
+.card-text {
+  p {
+    color: white !important;
+  }
 }

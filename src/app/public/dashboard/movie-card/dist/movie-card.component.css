@@ -60,3 +60,7 @@
 .card-title {
   color: white;
 }
+
+.card-text p {
+  color: white !important;
+}

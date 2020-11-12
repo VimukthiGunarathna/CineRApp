@@ -29,6 +29,8 @@ var icon_1 = require("@angular/material/icon");
 var cover_box_component_1 = require("./public/dashboard/cover-box/cover-box.component");
 var angular_bootstrap_md_1 = require("angular-bootstrap-md");
 var angular_bootstrap_md_2 = require("angular-bootstrap-md");
+// MDB Angular Free
+var angular_bootstrap_md_3 = require("angular-bootstrap-md");
 var AppModule = /** @class */ (function () {
     function AppModule(library) {
         this.library = library;
@@ -59,7 +61,11 @@ var AppModule = /** @class */ (function () {
                 icon_1.MatIconModule,
                 angular_bootstrap_md_1.CarouselModule,
                 angular_bootstrap_md_1.WavesModule,
-                angular_bootstrap_md_2.MDBBootstrapModule.forRoot()
+                angular_bootstrap_md_2.MDBBootstrapModule.forRoot(),
+                angular_bootstrap_md_3.ModalModule,
+                angular_bootstrap_md_3.TooltipModule,
+                angular_bootstrap_md_3.PopoverModule,
+                angular_bootstrap_md_3.ButtonsModule
             ],
             providers: [],
             bootstrap: [app_component_1.AppComponent]

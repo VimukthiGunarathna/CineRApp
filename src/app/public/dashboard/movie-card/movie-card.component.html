@@ -21,7 +21,7 @@
                 <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups"
                     *ngFor="let slot of movie.movie_slots">
                     <div class="btn-group mr-2" role="group" aria-label="First group" data-toggle="modal"
-                        data-target="#updateMovie" (click)="bookMovieServiceUpdate(movie,slot)">
+                        data-target="#basicExample" mdbWavesEffect (click)="bookMovieServiceUpdate(movie,slot)">
                         <button mdbBtn type="button"
                             style="color: white; box-shadow: 0 2px 5px 0 rgb(0 0 0 / 55%), 0 2px 10px 0 rgba(0,0,0,.12);"
                             class="waves-light" mdbWavesEffect>{{slot.time_slot}}</button>

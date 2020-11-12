@@ -22,6 +22,8 @@ import {MatIconModule} from '@angular/material/icon';
 import { CoverBoxComponent } from './public/dashboard/cover-box/cover-box.component';
 import { CarouselModule, WavesModule } from 'angular-bootstrap-md'
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
+// MDB Angular Free
+import { ModalModule, TooltipModule, PopoverModule, ButtonsModule } from 'angular-bootstrap-md'
 
 
 
@@ -49,7 +51,11 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
     MatIconModule,
     CarouselModule,
     WavesModule,
-    MDBBootstrapModule.forRoot()
+    MDBBootstrapModule.forRoot(),
+    ModalModule,
+    TooltipModule,
+    PopoverModule,
+    ButtonsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

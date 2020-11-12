@@ -1,0 +1,38 @@
+.modal-content {
+  background-color: #151F2E;
+  border-radius: 10px !important;
+
+  h2 {
+    font-size: 22px;
+    color: white;
+  }
+
+  h3 {
+    font-size: 15px;
+    color: white;
+    font-weight: 100;
+  }
+
+  h4 {
+    color: white !important;
+    font-weight: 100;
+    font-size: 12px;
+    font-style: italic;
+  }
+}
+
+.text-center {
+  .sub-btn {
+    margin-top: 3em;
+    background-color: #1a4182 !important;
+  }
+
+  .card-body {
+    .input {
+      input {
+        background-color: #151F2E !important;
+      }
+    }
+  }
+
+}

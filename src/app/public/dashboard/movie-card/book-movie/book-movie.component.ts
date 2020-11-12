@@ -13,6 +13,8 @@ import { BookingItemService } from 'src/app/shared/booking-item.service';
 export class BookMovieComponent implements OnInit {
 
   public bookingItem
+  colorSelect: Array<any>;
+  sizeSelect: Array<any>
 
   // Forms
   public booking_form;
@@ -26,6 +28,11 @@ export class BookMovieComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this.colorSelect = [
+      { value: 'Black', label: 'Black' },
+      { value: 'White', label: 'White' },
+      { value: 'Red', label: 'Red' },
+    ];
     this.bookingItemService.bookingItem.subscribe(data => {
       this.bookingItem = data;
       //console.log(data);
